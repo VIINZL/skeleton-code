@@ -11,4 +11,4 @@ function checkShards(shard, shards) {
 
 manager.spawn();
 manager.on('shardCreate', shard => console.log(`Launched shard ${shard.id}`));
-manager.on('shardCreate', shard => checkshards(shard, shards));
+manager.on('shardCreate', shard => checkShards(shard, shards));
