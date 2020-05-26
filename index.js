@@ -3,7 +3,7 @@ const rawshards = process.env.SHARDS;
 const shards = parseInt(rawshards, 10);
 const manager = new ShardingManager('./bot.js', { totalShards: shards });
 
-function checkshards(shard, shards) => {
+function checkShards(shard, shards) {
   if (shards - shard.id === 0) {
     console.log('Ready! (all shards have been spawned)');
   };
