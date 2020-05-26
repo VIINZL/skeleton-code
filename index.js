@@ -1,6 +1,6 @@
 const { ShardingManager } = require('discord.js');
-let shards = process.env.SHARDS;
-let shards = parseInt(shards, 10);
+const rawshards = process.env.SHARDS;
+const shards = parseInt(rawshards, 10);
 const manager = new ShardingManager('./bot.js', { totalShards: shards });
 
 manager.spawn();
