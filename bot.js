@@ -13,7 +13,7 @@ client.on('message', message => {
 		return message.channel.send(`Server count: ${client.guilds.cache.size}`);
 	}
 	if (command === 'shards') {
-		return message.channel.send(client.shard.broadcastEval('this.shard.id'));
+		return client.shard.broadcastEval('console.log(hey im a shard)');
 	}
 });
 
